@@ -1,0 +1,128 @@
+.FAQ {
+  width: 100%;
+
+  header {
+    text-align: center;
+    margin: 0 30%;
+
+    h2 {
+      @include textStyle(34px, #363636, 1.18, bold);
+    }
+
+    p {
+      @include textStyle(16px, #383838, 1.63);
+    }
+  }
+
+  .container {
+    display: inline-block;
+    margin: 20px 20%;
+    border-bottom: rgba(78, 78, 78, 0.16) 2px solid;
+    padding-bottom: 5%;
+    overflow: hidden;
+    .article {
+      margin-right: 7%;
+      float: left;
+      width: 40%;
+      .element {
+        border-bottom: rgba(78, 78, 78, 0.16) 2px solid;
+        overflow: hidden;
+
+        h4 {
+          position: relative;
+          @include textStyle(20px, #ababab, 1.3, bold);
+          z-index: 1;
+        }
+
+        h4::before,
+        h4::after {
+          content: '';
+          width: 10px;
+          height: 1px;
+          background-color: #cccccc;
+          position: absolute;
+          top: 8px;
+          cursor: pointer;
+        }
+
+        h4::before {
+          transform: rotate(-30deg);
+          right: 0;
+        }
+
+        h4::after {
+          transform: rotate(30deg);
+          right: 8px;
+        }
+
+        h4.active {
+          color: #383838;
+        }
+
+        h4.active::before,
+        h4.active::after {
+          background-color: #383838;
+        }
+
+        h4.active::before {
+          transform: rotate(30deg);
+        }
+
+        h4.active::after {
+          transform: rotate(-30deg);
+        }
+
+        p {
+          display: none;
+          padding-top: 10px;
+          @include textStyle(16px, #383838, 1.63);
+
+          img {
+            display: none;
+          }
+        }
+
+        p.active {
+          display: block;
+        }
+      }
+    }
+    img {
+      width: 50%;
+      margin-top: 2%;
+      margin-right: 2%;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.13), 0 10px 10px rgba(0, 0, 0, 0.09);
+      float: right;
+    }
+  }
+
+  @media (max-width: 768px) {
+    header {
+      margin: 0 10%;
+    }
+
+    .container {
+      display: block;
+      margin: 15px 10%;
+      .article {
+        margin-right: 0;
+        width: 100%;
+        .element {
+          p {
+            img {
+              display: block;
+              margin: 0 auto;
+              float: none;
+              box-shadow: 0 14px 28px rgba(0, 0, 0, 0.13), 0 10px 10px rgba(0, 0, 0, 0.09);
+              width: 90%;
+            }
+          }
+        }
+      }
+
+      img {
+        display: none;
+      }
+    }
+  }
+}

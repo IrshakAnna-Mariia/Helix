@@ -1,0 +1,56 @@
+@mixin flexBox($just-cont: space-between) {
+  display: flex;
+  justify-content: $just-cont;
+  align-items: center;
+}
+@mixin textStyle($size: 14px, $color: white, $lineHeight: normal, $font-weight: normal ) {
+  font-family: TTNorms;
+  font-weight: $font-weight;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: $lineHeight;
+  letter-spacing: normal;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin menu_btn($size: 14px, $color: white, $lineHeight: normal ) {
+  .menu_icon{
+    display: inline;
+    align-items: center;
+    cursor: pointer;
+    width: 30px;
+    z-index: 3;
+  }
+  .menu_icon > span,
+  .menu_icon > span::before,
+  .menu_icon > span::after {
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 2px;
+    background-color: #383838;
+  }
+  .menu_icon > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu_icon > span::after {
+    content: '';
+    top: 8px;
+  }
+
+  .menu_icon.active > span {
+    height: 0;
+  }
+
+  .menu_icon.active > span::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  .menu_icon.active > span::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+}

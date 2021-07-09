@@ -1,0 +1,74 @@
+header.navigation {
+  @include flexBox;
+  position: sticky;
+  background: #fff;
+  top: 0;
+  padding: 10px 21%;
+  z-index: 7;
+
+  .icon, .cart_icon {
+    max-width: 90px;
+    z-index: 3;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .container {
+    @include flexBox;
+  }
+
+  .menu {
+    margin-left: 0;
+    padding-left: 0;
+    @include flexBox;
+  }
+
+  a {
+    margin: 0 15px;
+    @include textStyle(15px, #383838, 1.63 );
+  }
+
+  .menu_icon{
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    body.lock {
+      overflow: hidden;
+    }
+    padding: 7px 15px;
+
+    .menu {
+      display: none;
+    }
+
+    .menu.active {
+      margin: 0;
+      padding-top: 150px;
+      display: block;
+      position: fixed;
+      text-align: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2000px;
+      overflow: auto;
+      background: white;
+      z-index: 2;
+    }
+
+    li {
+      margin-bottom: 7px;
+    }
+
+    @include menu_btn;
+  }
+  @media (min-width: 769px) and (max-width: 960px) {
+    padding: 10px 10%;
+  }
+  @media (min-width: 961px) and (max-width: 1260px) {
+    padding: 10px 15%;
+  }
+}

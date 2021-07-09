@@ -1,0 +1,33 @@
+@import "textStyle";
+@import "mixin";
+@import "menu";
+@import "textWithTabs";
+@import "FAQ";
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.announcement_bar {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  background: #a0c5db;
+
+  p, a {
+    @include textStyle;
+  }
+
+  a {
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 768px) {
+  body.lock {
+    overflow: hidden;
+  }
+}

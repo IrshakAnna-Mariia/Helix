@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scale=0">
+    <title>Helix</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+</head>
+<body>
+<div class="announcement_bar">
+    <p>We've update our polices. <a href="">Learn more</a></p>
+</div>
+<main>
+    <header class="navigation">
+        <div class="menu_icon" id="menu_icon"><span></span></div>
+        <img src="img/helix_icon.png" class="icon"/>
+        <div class="container">
+                <ul class="menu" id="menu">
+                    <li><a>Population Health</a></li>
+                    <li><a>DNA Tests</a></li>
+                    <li><a>Register Kit</a></li>
+                    <li><a>Sign In</a></li>
+                </ul>
+            <img src="img/cart-icon.svg" class="cart_icon"/>
+        </div>
+    </header>
+
+    <div class="text-with-tabs">
+        <header>
+            <h2>Bringing the benefits of multiple assays into one</h2>
+            <p>Helix’s Exome+® assay has been carefully optimized to provide the benefits of lcWGS, whole exome sequencing, microarrays, and targeted panels — all in one assay.</p>
+        </header>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'TargetedPanels')" id="defaultOpen">Targeted Panels
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'WholeExomeSequencing')">Whole Exome Sequencing
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'lcWGSandMicroarrays')">lcWGS and Microarrays</button>
+        </div>
+        <div id="slider">
+            <div id="TargetedPanels" class="tabcontent">
+                <h3>Targeted Panels</h3>
+                <img src="img/2v6XeWYE.png" class="tabsImg"/>
+                <p>Panels are often used in clinical settings because they’re low cost and provide high quality coverage
+                    of specific, pre-defined genomic regions of interest. While useful in certain settings, such assays
+                    are limited by their narrow focus.
+                </p>
+                <p>With ≥ 99.5% call rate across ~600 genes relevant
+                    to many disease states, the Exome+ assay enables you to run multiple panel-grade analyses with a
+                    single sample.
+                </p>
+            </div>
+
+            <div id="WholeExomeSequencing" class="tabcontent">
+                <h3>Whole Exome Sequencing</h3>
+                <img src="img/XoS7hwts.png" class="tabsImg"/>
+                <p>Alternative text</p>
+            </div>
+
+            <div id="lcWGSandMicroarrays" class="tabcontent">
+                <h3>lcWGS and Microarrays</h3>
+                <img src="img/sCjOqkyI.png" class="tabsImg"/>
+                <p>Alternative text</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="FAQ">
+        <header>
+            <h2>A future proofed assay</h2>
+            <p>Helix’s Exome+ assay has been carefully optimized to provide the benefits
+                of targeted panels and the completeness
+                of whole exome sequencing.
+            </p>
+        </header>
+
+        <div class="container">
+            <div class="article">
+                <div class="element" id="Flexible-test-design">
+                    <h4 id="default">
+                        Flexible test design
+                    </h4>
+                    <p>
+                        <img src="img/xpgrxcwA.png" class="imgForFAQ"/><br/>
+                        The Exome+ assay provides the flexibility needed to build a comprehensive panel that can be expanded over time. With ~20,000 genes sequenced in each sample, every gene becomes a candidate for inclusion. And, while we have ensured the highest call rates across those genes that are most likely to belong to a panel, the Exome+ assay delivers high call rates for all genes beyond this core set.
+                    </p>
+                </div>
+                <div class="element" id="Sequence-once_query-often">
+                    <h4>
+                        Sequence once, query often
+                    </h4>
+                    <p>
+                        <img src="img/v08NmZtk.png" class="imgForFAQ"/><br/>
+                        Alternative text
+                    </p>
+                </div>
+                <div class="element" id="Comprehensive-PGx">
+                    <h4>
+                        Comprehensive PGx
+                    </h4>
+                    <p>
+                        <img src="img/nf1r1Zoc.png" class="imgForFAQ"/><br/>
+                        Alternative text
+                    </p>
+                </div>
+            </div>
+
+            <img src="img/xpgrxcwA.png" id="currentImgForFAQ"/>
+        </div>
+    </div>
+</main>
+
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>

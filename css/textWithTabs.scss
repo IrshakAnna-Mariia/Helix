@@ -1,0 +1,95 @@
+.text-with-tabs {
+  background: #f4f4f4;
+  padding: 10px 18% 10%;
+
+  header {
+    text-align: center;
+    margin: 0 20%;
+
+    h2 {
+      @include textStyle( 34px, #363636, 1.18, bold );
+    }
+
+    p {
+      @include textStyle( 16px, #383838, 1.63 );
+    }
+  }
+
+  .tab {
+    overflow: hidden;
+    @include flexBox(center);
+
+    button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+    }
+
+    button.active, button:hover {
+      color: #4b94c6;
+    }
+  }
+
+  .tabcontent {
+    display: none;
+    padding: 5% 10% 10% 10%;
+    background: white;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.13), 0 10px 10px rgba(0, 0, 0, 0.09);
+    border: 1px solid #ccc;
+    overflow: hidden;
+
+    .tabsImg {
+      float: right;
+      width: 40%;
+      height: auto;
+    }
+
+    h3 {
+      @include textStyle( 16px, #363636, 1.63, bold );
+    }
+
+    p {
+      padding-right: 50%;
+      @include textStyle( 16px, #4e4e4e, 1.63 );
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 0 50px;
+
+    header {
+      margin: 0 10%;
+    }
+    .tab {
+      display: none;
+    }
+    .mobile_tab {
+      display: block;
+      @include flexBox(center);
+    }
+
+    .flickity-prev-next-button {
+      display: none;
+    }
+
+    .tabcontent {
+      padding: 2% 6% 20px;
+      width: 66%;
+      min-height: 100%;
+      margin-right: 5%;
+      margin-bottom: 15px;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08), 0 10px 10px rgba(0, 0, 0, 0.04);
+      .tabsImg {
+        float: none;
+        width: 100%;
+      }
+      p {
+        padding-right: 0;
+      }
+    }
+  }
+}
