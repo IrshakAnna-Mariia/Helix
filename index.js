@@ -34,7 +34,9 @@ function openCity(event, name) {
         for (let i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "none";
         }
-        document.getElementById("slider").className.replace(" js-flickity", "");
+        if (document.getElementsByClassName('js-flickity')[0]) {
+            document.getElementById("slider").className.replace("js-flickity flickity-enabled is-draggable", "");
+        }
 
         for (let i = 0; i < tablinks.length; i++) {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
@@ -44,8 +46,9 @@ function openCity(event, name) {
 
         event.currentTarget.className += " active";
     } else {
-        console.log('why')
-        document.getElementById("slider").className += " js-flickity";
+        if (!document.getElementsByClassName('js-flickity')[0]) {
+            document.getElementById("slider").className += " js-flickity";
+        }
 
         for (let i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "block";
